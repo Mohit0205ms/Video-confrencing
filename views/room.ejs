@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Conference</title>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.1/peerjs.min.js.map"></script>
+    <script src="/socket.io/socket.io.js"></script> <!--adding cnd link to socket so we can use socket.io-->
+    
+    <script>
+        ROOM_ID = "<%=roomId%>"; // here using the RoomId that is passed by the server
+        USER_NAME="<%=userName%>";
+        console.log("Printing user from room.ejs : "+USER_NAME);
+    </script>
+</head>
+
+<body>
+    <!-- <div id="video-grid">
+    </div> -->
+    <!-- Structire -->
+    <!-- 
+        <Navbar/>
+        <div>
+            <participant/>
+            <video-grid/>
+            <chat/>
+        </div>
+        <footer/>
+     -->
+
+    <!-- Navbar -->
+    <nav id="Navbar">
+        <span id="Navbar-heading">Conference</span>
+    </nav>
+
+    <!-- Middle Container -->
+    <div class="Middle-Container">
+
+        <!-- Participants -->
+        <div id="participant-container">
+            <span id="participant-heading">Participants</span>
+            <hr />
+            <div id="displayParticipants"></div>
+        </div>
+        <!-- Video Grid -->
+        <div id="video-grid"></div>
+        <!-- Chat -->
+        <div id="chat-Container">
+            <span id="chat-heading">Chat</span>
+            <hr />
+            <div id="displayMessage"></div>
+            <input type="text" id="addMessage" placeholder="send message" onclick="" />
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div id="muteVoice" class="main__controls_button" onclick="MuteUnmute()">
+            <i class="fa fa-microphone"></i>
+            <span id="Mute">Mute</span>
+        </div>
+        <div id="playPauseVideo" class="main__controls_button" onclick="videoPlayStop()">
+            <i class="fa fa-video-camera"></i>
+            <span id="pause">Pause</span>
+        </div>
+        <div id="RecordButton" class="main__controls_button" onclick="Recording()">
+            <i class="fa fa-comment"></i>
+            <span id="Record">Recording</span>
+        </div>
+        <div id="leave-meeting" class="main__controls_button" onclick="leaveMetting()">
+            <i class="fa fa-times"></i>
+            <span class="leave">Leave Meeting</span>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+
+/* Navbar */
+
+#Navbar{
+  width:100%;
+  height:10vh;
+  background-color:rgb(37, 37, 37);
+  display: flex;
+  align-items: center;
+}
+#Navbar-heading{
+  font-size:30px;
+  margin-left:30px;
+  color:whitesmoke;
+}
+
+/* Middle-Container */
+
+.Middle-Container{
+  width:100%;
+  height:80vh;
+  display: flex;
+  background-color:black;
+}
+#participant-container{
+  width:20%;
+  background-color: rgb(50, 50, 50);
+  text-align: center;
+}
+#participant-heading{
+  font-size:20px;
+  color:rgb(228, 228, 228);
+}
+#displayParticipants{
+  width:100%;
+  height:80%;
+  /* background-color: white; */
+}
+#video-grid {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 60%;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  overflow-x:hidden;
+}
+video {
+  display: block;
+  flex: 1;
+  object-fit: cover;
+  border: 5px solid #000;
+  max-width: 400px;
+}
+#chat-Container{
+  width:20%;
+  background-color: rgb(50, 50, 50);
+  text-align: center;
+  position: relative;
+}
+#chat-heading{
+  font-size:20px;
+  color:rgb(228, 228, 228);
+}
+#displayMessage{
+  width:100%;
+  height:80%;
+}
+#addMessage{
+  width:90%;
+  height:10%;
+  margin-top:5px;
+  cursor: pointer;
+  font-size:15px;
+  color:black;
+}
+
+/* Footer */
+
+#footer{
+  width:100%;
+  height:10vh;
+  display: flex;
+  justify-content: space-evenly;
+  background-color:rgb(34, 34, 34);
+}
+
+#muteVoice,#playPauseVideo,#RecordButton,#leave-meeting{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+#Mute,#pause,#Record,#leave{
+  width:30px;
+  height:40px;
+}
+.main__controls_button {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  margin: 5px;
+}
+.main__controls_button span {
+  margin-top: 10px;
+  display: block;
+}
+.main__controls_button:hover {
+  background-color: #34383b;
+}
+.main__controls_button i {
+  font-size: 25px;
+}
+#leave-meeting{
+  background-color: red;
+  color: white;
+}
+
+.red{
+  background-color:red;
+}
