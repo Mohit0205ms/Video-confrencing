@@ -24,7 +24,7 @@ const list = [];
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(express.static(__dirname + "public"));
 
 app.use("/peerjs", peerServer);
 
